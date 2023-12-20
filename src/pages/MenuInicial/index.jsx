@@ -39,19 +39,19 @@ const MenuInicialPage = () => {
             </Button>
             <Button
               className="common-pointer cursor-pointer font-extrabold leading-[normal] min-w-[217px] text-center text-xs"
-              onClick={() => navigate("")}
+              onClick={() => navigate("EditarUsuario")}
             >
               Editar usuário
             </Button>
             <Button
               className="common-pointer cursor-pointer font-extrabold leading-[normal] min-w-[217px] text-center text-xs"
-              onClick={() => navigate("")}
+              onClick={() => navigate("BuscarUsuarios")}
             >
               Buscar usuários
             </Button>
             <Button
               className="common-pointer cursor-pointer font-extrabold leading-[normal] min-w-[217px] text-center text-xs"
-              onClick={() => navigate("")}
+              onClick={() => navigate("BuscarUsuario")}
             >
               Buscar usuário
             </Button>

@@ -2,12 +2,10 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "pages/Home";
 import NotFound from "pages/NotFound";
-const Buscarusurio = React.lazy(() => import("pages/BuscarUsuario"));
-const Buscarusurios = React.lazy(() => import("pages/BuscarUsuarios"));
-const Criaodeusurioresultado = React.lazy(
-  () => import("pages/EditarUsuario"),
-);
-const Criaadeusurio = React.lazy(() => import("pages/CriarUsuario"));
+const Buscarusuario = React.lazy(() => import("pages/BuscarUsuario"));
+const Buscarusuarios = React.lazy(() => import("pages/BuscarUsuarios"));
+const EditarUsuario = React.lazy(() => import("pages/EditarUsuario"),);
+const CriarUsuario = React.lazy(() => import("pages/CriarUsuario"));
 const MenuInicial = React.lazy(() => import("pages/MenuInicial"));
 const ProjectRoutes = () => {
   return (
@@ -16,14 +14,11 @@ const ProjectRoutes = () => {
         <Routes>
           <Route path="/" element={<MenuInicial />} />
           <Route path="*" element={<NotFound />} />
-          <Route path="/criaadeusurio" element={<Criaadeusurio />} />
-          <Route
-            path="/criaodeusurioresultado"
-            element={<Criaodeusurioresultado />}
-          />
-          <Route path="/buscarusurios" element={<Buscarusurios />} />
-          <Route path="/buscarusurio" element={<Buscarusurio />} />
-          <Route path="/dhiwise-dashboard" element={<Home />} />
+          <Route path="/criarusuario" element={<CriarUsuario/>} />
+          <Route path="/editarusuario" element={<EditarUsuario/>}/>
+          <Route path="/buscarusuarios" element={<Buscarusuarios/>} />
+          <Route path="/buscarusuario" element={<Buscarusuario/>} />
+          <Route path="/dhiwise-dashboard" element={<Home/>} />
         </Routes>
       </Router>
     </React.Suspense>
