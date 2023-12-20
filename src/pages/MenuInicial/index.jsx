@@ -33,7 +33,7 @@ const MenuInicialPage = () => {
           <div className="flex sm:flex-col flex-row sm:gap-10 items-center justify-between w-full">
             <Button
               className="common-pointer cursor-pointer font-extrabold leading-[normal] min-w-[217px] text-center text-xs"
-              onClick={() => navigate("")}
+              onClick={() => navigate("CriarUsuario")}
             >
               Criar usuário
             </Button>

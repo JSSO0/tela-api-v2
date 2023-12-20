@@ -1,7 +1,7 @@
 // api.js
 import axios from 'axios';
 
-export const criarUsuario = async (userData) => {
+export const criarusuario = async (userData) => {
   try {
     const response = await axios.post(
       'http://localhost:8080/api/pessoas',

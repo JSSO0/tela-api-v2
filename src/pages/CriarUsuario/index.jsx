@@ -1,8 +1,6 @@
-import React from "react";
-
-import { Button, Img, Input, Text, TextArea } from "components";
+import { Button, Img, Input, Text, TextArea, ApiCalls } from "components";
 import React, { useState } from 'react';
-import { criarusuario } from 'ApiCalls';
+import { criarusuario } from 'components/ApiCalls/criarusuario';
 
 const CriaadeusurioPage = () => {
 
@@ -16,10 +14,15 @@ const CriaadeusurioPage = () => {
   });
   const [apiResponse, setApiResponse] = useState(null);
   const [loading, setLoading] = useState(false);
+  const [apiResult, setApiResult] = useState(null);
+
 
   const handleInputChange = (event) => {
-    const { name, value } = event.target;
-    setUserData((prevData) => ({ ...prevData, [name]: value }));
+    // Verifique se 'event' não é nulo antes de desestruturar 'event.target'
+    if (event && event.target) {
+      const { name, value } = event.target;
+      setUserData((prevData) => ({ ...prevData, [name]: value }));
+    }
   };
 
   const handleFormSubmit = async (event) => {
